@@ -2,72 +2,141 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Bikepackify</title>
+
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+
       <style>
+
+      html { scroll-behavior: smooth; }
+
+.wrapper {
+
+max-width: 1440px;
+margin: 0 auto;
+border: 1px solid #333;
+border-radius: 10px;
+
+
+}
          .with-sidebar {
          display: flex;
          flex-wrap: wrap;
-         gap: 20px;
+         gap: 0px;
          }
+
          .with-sidebar > :first-child {
-         flex-basis: 15rem;
+         flex-basis: 18rem;
          flex-grow: 1;
-         background-color: #FFCC00;
          }
-         .article-body {
+
+
+        #article-heading {
          flex-basis: 0;
          flex-grow: 999;
-         min-inline-size: 50%;
-         background-color: blue;
+         min-inline-size: 75%;
+         padding-left: 20px;
+
          }
-         .article-heading {
+
+
+
+         #article-body {
          flex-basis: 0;
          flex-grow: 999;
-         min-inline-size: 50%;
-         background-color: red;
+         min-inline-size: 75%;
+         padding-left: 20px;
+
          }
-         .with-menu  {
+
+
+         #article-body p, #article-heading h1 {
+          max-width: 880px;
+
+         }
+
+
+
+
+         .sidebar-menu  {
          width: 25%;
          height: 25vh;
          position: sticky;
-         top: 0;
+         top: 95px;
+         padding-left: 20px;
          }
 
 
-@media only screen and (max-width: 500px) {
-   .with-menu {
+
+
+
+@media only screen and (max-width: 61em) {
+   .sidebar-menu {
       all:unset
    }
+
+
+}
+
+summary, details {
+cursor:pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+summary {
+  font-weight: 700;
+}
+
+ol li{
+  list-style-type: none;
 }
 
 
       </style>
    </head>
    <body>
+
+ <div class="wrapper">
       <div class="with-sidebar">
          <div></div>
-         <div class="article-heading">
+         <div id="article-heading">
             <h1>What is the best frame material for bikepacking?</h1>
+            <div>Andrew Beattie | October 6, 2023 | 7 min read</div>
          </div>
       </div>
+
+
       <div class="with-sidebar">
-         <div class="with-menu">
+
+      <div class="sidebar-menu">
             <!-- sidebar -->
             <details id="toc">
-               <summary>Table of Contents</summary>
-               <ul>
-                  <li>Heading 1</li>
-                  <li>Heading 2</li>
-                  <li>Heading 3</li>
-               </ul>
+
+            <summary>In this article</summary>
+               <ol>
+                  <li><a href="#heading-one">Heading 1</a></li>
+                  <li><a href="#heading-two">Heading 2</a></li>
+                  <li><a href="#heading-three">Heading 3</a></li>
+               </ol>
             </details>
+
          </div>
-         <div class="article-body">
-            <h2>Aluminium</h2>
-            <p>Aluminium used to be the most common frame material and still is in most areas of the World and is making somewhat of a resurgence of late. It is much easier to fabricate an aluminium frame at a lower weight and lower cost than steel. However because aluminium is less dense than steel, carbon and titanium the tubing on aluminium frames tends to be bigger and thicker.</p>
-            <p>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel dolor sed magna rutrum rhoncus vitae in nunc. Vestibulum tincidunt libero at sodales luctus. Quisque facilisis et ante ut pulvinar. Nam eu viverra ipsum, eget hendrerit est. Curabitur eleifend magna sed dolor placerat posuere. Etiam in nibh in nisi consectetur porttitor in a libero. Donec sit amet orci id velit luctus pretium.
+
+      <div id="article-body" class="prose">
+
+      <p>When it comes to selecting a bikepacking bike, frame material is not nearly as important as people think. There are, however, some important caveats in particular user case scenarios and conditions to consider. </p>
+            <h2 id="heading-one">Heading 1</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel dolor sed magna rutrum rhoncus vitae in nunc. Vestibulum tincidunt libero at sodales luctus. Quisque facilisis et ante ut pulvinar. Nam eu viverra ipsum, eget hendrerit est. Curabitur eleifend magna sed dolor placerat posuere. Etiam in nibh in nisi consectetur porttitor in a libero. Donec sit amet orci id velit luctus pretium.
             </p>
             <p>
                Phasellus sollicitudin volutpat arcu a euismod. Phasellus a congue risus, quis mollis nunc. Aenean blandit eleifend orci. Phasellus felis sem, euismod eu orci eu, ultricies varius turpis. Mauris dictum suscipit massa nec gravida. Quisque at pulvinar ligula. Phasellus cursus dui in lobortis pretium. Morbi augue turpis, ornare non vehicula suscipit, malesuada nec nisl.
@@ -96,8 +165,75 @@
             <p>
                Maecenas vel ipsum lectus. Nulla feugiat condimentum tellus eu posuere. Phasellus nisi nunc, suscipit quis euismod vitae, scelerisque sed sem. Sed dapibus erat a felis tempus auctor. Phasellus sed turpis a nunc interdum faucibus et ut augue. Ut eu dignissim dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sit amet pulvinar magna. Phasellus blandit eros mauris, fermentum tincidunt enim posuere ut. Aliquam erat volutpat. Nullam nec metus nec nibh cursus faucibus ut aliquam orci. Donec gravida erat ac viverra interdum. Curabitur molestie fringilla tortor nec vehicula.
             </p>
+
+                        <h2 id="heading-two">Heading 2</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel dolor sed magna rutrum rhoncus vitae in nunc. Vestibulum tincidunt libero at sodales luctus. Quisque facilisis et ante ut pulvinar. Nam eu viverra ipsum, eget hendrerit est. Curabitur eleifend magna sed dolor placerat posuere. Etiam in nibh in nisi consectetur porttitor in a libero. Donec sit amet orci id velit luctus pretium.
+            </p>
+            <p>
+               Phasellus sollicitudin volutpat arcu a euismod. Phasellus a congue risus, quis mollis nunc. Aenean blandit eleifend orci. Phasellus felis sem, euismod eu orci eu, ultricies varius turpis. Mauris dictum suscipit massa nec gravida. Quisque at pulvinar ligula. Phasellus cursus dui in lobortis pretium. Morbi augue turpis, ornare non vehicula suscipit, malesuada nec nisl.
+            </p>
+            <p>
+               Donec a eleifend ipsum, eget hendrerit leo. Ut sit amet dolor gravida, venenatis leo a, hendrerit arcu. In hac habitasse platea dictumst. Sed ornare convallis hendrerit. Suspendisse sit amet ex at tortor fermentum elementum. Quisque ut dapibus dui. Fusce tortor enim, iaculis vitae fermentum ac, lobortis non ligula. Mauris eleifend ultricies condimentum. Praesent eros enim, hendrerit vel varius nec, cursus bibendum ligula. Mauris luctus egestas leo sit amet sagittis.
+            </p>
+            <p>
+               Aenean nec lectus in enim malesuada pellentesque nec eu risus. Nunc eleifend ante ligula, vitae semper urna auctor ut. In vehicula arcu ac lectus maximus iaculis. Curabitur id nunc vitae nunc porttitor posuere. Nunc scelerisque fermentum mollis. Nam mauris lorem, pretium id augue in, dignissim pellentesque ligula. Aenean efficitur eget felis sed efficitur. Nam placerat et tellus et aliquam. Aliquam tincidunt consectetur molestie. Vestibulum suscipit mattis nisl ut posuere. In accumsan semper luctus. Suspendisse scelerisque id enim vitae tincidunt. Duis tristique hendrerit nisi, in interdum ligula. Curabitur eu diam quam.
+            </p>
+            <p>
+               Maecenas vel ipsum lectus. Nulla feugiat condimentum tellus eu posuere. Phasellus nisi nunc, suscipit quis euismod vitae, scelerisque sed sem. Sed dapibus erat a felis tempus auctor. Phasellus sed turpis a nunc interdum faucibus et ut augue. Ut eu dignissim dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sit amet pulvinar magna. Phasellus blandit eros mauris, fermentum tincidunt enim posuere ut. Aliquam erat volutpat. Nullam nec metus nec nibh cursus faucibus ut aliquam orci. Donec gravida erat ac viverra interdum. Curabitur molestie fringilla tortor nec vehicula.
+            </p>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel dolor sed magna rutrum rhoncus vitae in nunc. Vestibulum tincidunt libero at sodales luctus. Quisque facilisis et ante ut pulvinar. Nam eu viverra ipsum, eget hendrerit est. Curabitur eleifend magna sed dolor placerat posuere. Etiam in nibh in nisi consectetur porttitor in a libero. Donec sit amet orci id velit luctus pretium.
+            </p>
+            <p>
+               Phasellus sollicitudin volutpat arcu a euismod. Phasellus a congue risus, quis mollis nunc. Aenean blandit eleifend orci. Phasellus felis sem, euismod eu orci eu, ultricies varius turpis. Mauris dictum suscipit massa nec gravida. Quisque at pulvinar ligula. Phasellus cursus dui in lobortis pretium. Morbi augue turpis, ornare non vehicula suscipit, malesuada nec nisl.
+            </p>
+            <p>
+               Donec a eleifend ipsum, eget hendrerit leo. Ut sit amet dolor gravida, venenatis leo a, hendrerit arcu. In hac habitasse platea dictumst. Sed ornare convallis hendrerit. Suspendisse sit amet ex at tortor fermentum elementum. Quisque ut dapibus dui. Fusce tortor enim, iaculis vitae fermentum ac, lobortis non ligula. Mauris eleifend ultricies condimentum. Praesent eros enim, hendrerit vel varius nec, cursus bibendum ligula. Mauris luctus egestas leo sit amet sagittis.
+            </p>
+            <p>
+               Aenean nec lectus in enim malesuada pellentesque nec eu risus. Nunc eleifend ante ligula, vitae semper urna auctor ut. In vehicula arcu ac lectus maximus iaculis. Curabitur id nunc vitae nunc porttitor posuere. Nunc scelerisque fermentum mollis. Nam mauris lorem, pretium id augue in, dignissim pellentesque ligula. Aenean efficitur eget felis sed efficitur. Nam placerat et tellus et aliquam. Aliquam tincidunt consectetur molestie. Vestibulum suscipit mattis nisl ut posuere. In accumsan semper luctus. Suspendisse scelerisque id enim vitae tincidunt. Duis tristique hendrerit nisi, in interdum ligula. Curabitur eu diam quam.
+            </p>
+            <p>
+               Maecenas vel ipsum lectus. Nulla feugiat condimentum tellus eu posuere. Phasellus nisi nunc, suscipit quis euismod vitae, scelerisque sed sem. Sed dapibus erat a felis tempus auctor. Phasellus sed turpis a nunc interdum faucibus et ut augue. Ut eu dignissim dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sit amet pulvinar magna. Phasellus blandit eros mauris, fermentum tincidunt enim posuere ut. Aliquam erat volutpat. Nullam nec metus nec nibh cursus faucibus ut aliquam orci. Donec gravida erat ac viverra interdum. Curabitur molestie fringilla tortor nec vehicula.
+            </p>
+
+                        <h2 id="heading-three">Heading 3</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel dolor sed magna rutrum rhoncus vitae in nunc. Vestibulum tincidunt libero at sodales luctus. Quisque facilisis et ante ut pulvinar. Nam eu viverra ipsum, eget hendrerit est. Curabitur eleifend magna sed dolor placerat posuere. Etiam in nibh in nisi consectetur porttitor in a libero. Donec sit amet orci id velit luctus pretium.
+            </p>
+            <p>
+               Phasellus sollicitudin volutpat arcu a euismod. Phasellus a congue risus, quis mollis nunc. Aenean blandit eleifend orci. Phasellus felis sem, euismod eu orci eu, ultricies varius turpis. Mauris dictum suscipit massa nec gravida. Quisque at pulvinar ligula. Phasellus cursus dui in lobortis pretium. Morbi augue turpis, ornare non vehicula suscipit, malesuada nec nisl.
+            </p>
+            <p>
+               Donec a eleifend ipsum, eget hendrerit leo. Ut sit amet dolor gravida, venenatis leo a, hendrerit arcu. In hac habitasse platea dictumst. Sed ornare convallis hendrerit. Suspendisse sit amet ex at tortor fermentum elementum. Quisque ut dapibus dui. Fusce tortor enim, iaculis vitae fermentum ac, lobortis non ligula. Mauris eleifend ultricies condimentum. Praesent eros enim, hendrerit vel varius nec, cursus bibendum ligula. Mauris luctus egestas leo sit amet sagittis.
+            </p>
+            <p>
+               Aenean nec lectus in enim malesuada pellentesque nec eu risus. Nunc eleifend ante ligula, vitae semper urna auctor ut. In vehicula arcu ac lectus maximus iaculis. Curabitur id nunc vitae nunc porttitor posuere. Nunc scelerisque fermentum mollis. Nam mauris lorem, pretium id augue in, dignissim pellentesque ligula. Aenean efficitur eget felis sed efficitur. Nam placerat et tellus et aliquam. Aliquam tincidunt consectetur molestie. Vestibulum suscipit mattis nisl ut posuere. In accumsan semper luctus. Suspendisse scelerisque id enim vitae tincidunt. Duis tristique hendrerit nisi, in interdum ligula. Curabitur eu diam quam.
+            </p>
+            <p>
+               Maecenas vel ipsum lectus. Nulla feugiat condimentum tellus eu posuere. Phasellus nisi nunc, suscipit quis euismod vitae, scelerisque sed sem. Sed dapibus erat a felis tempus auctor. Phasellus sed turpis a nunc interdum faucibus et ut augue. Ut eu dignissim dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sit amet pulvinar magna. Phasellus blandit eros mauris, fermentum tincidunt enim posuere ut. Aliquam erat volutpat. Nullam nec metus nec nibh cursus faucibus ut aliquam orci. Donec gravida erat ac viverra interdum. Curabitur molestie fringilla tortor nec vehicula.
+            </p>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel dolor sed magna rutrum rhoncus vitae in nunc. Vestibulum tincidunt libero at sodales luctus. Quisque facilisis et ante ut pulvinar. Nam eu viverra ipsum, eget hendrerit est. Curabitur eleifend magna sed dolor placerat posuere. Etiam in nibh in nisi consectetur porttitor in a libero. Donec sit amet orci id velit luctus pretium.
+            </p>
+            <p>
+               Phasellus sollicitudin volutpat arcu a euismod. Phasellus a congue risus, quis mollis nunc. Aenean blandit eleifend orci. Phasellus felis sem, euismod eu orci eu, ultricies varius turpis. Mauris dictum suscipit massa nec gravida. Quisque at pulvinar ligula. Phasellus cursus dui in lobortis pretium. Morbi augue turpis, ornare non vehicula suscipit, malesuada nec nisl.
+            </p>
+            <p>
+               Donec a eleifend ipsum, eget hendrerit leo. Ut sit amet dolor gravida, venenatis leo a, hendrerit arcu. In hac habitasse platea dictumst. Sed ornare convallis hendrerit. Suspendisse sit amet ex at tortor fermentum elementum. Quisque ut dapibus dui. Fusce tortor enim, iaculis vitae fermentum ac, lobortis non ligula. Mauris eleifend ultricies condimentum. Praesent eros enim, hendrerit vel varius nec, cursus bibendum ligula. Mauris luctus egestas leo sit amet sagittis.
+            </p>
+            <p>
+               Aenean nec lectus in enim malesuada pellentesque nec eu risus. Nunc eleifend ante ligula, vitae semper urna auctor ut. In vehicula arcu ac lectus maximus iaculis. Curabitur id nunc vitae nunc porttitor posuere. Nunc scelerisque fermentum mollis. Nam mauris lorem, pretium id augue in, dignissim pellentesque ligula. Aenean efficitur eget felis sed efficitur. Nam placerat et tellus et aliquam. Aliquam tincidunt consectetur molestie. Vestibulum suscipit mattis nisl ut posuere. In accumsan semper luctus. Suspendisse scelerisque id enim vitae tincidunt. Duis tristique hendrerit nisi, in interdum ligula. Curabitur eu diam quam.
+            </p>
+            <p>
+               Maecenas vel ipsum lectus. Nulla feugiat condimentum tellus eu posuere. Phasellus nisi nunc, suscipit quis euismod vitae, scelerisque sed sem. Sed dapibus erat a felis tempus auctor. Phasellus sed turpis a nunc interdum faucibus et ut augue. Ut eu dignissim dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sit amet pulvinar magna. Phasellus blandit eros mauris, fermentum tincidunt enim posuere ut. Aliquam erat volutpat. Nullam nec metus nec nibh cursus faucibus ut aliquam orci. Donec gravida erat ac viverra interdum. Curabitur molestie fringilla tortor nec vehicula.
+            </p>
+
          </div>
       </div>
+
+  </div>
+
+
       <script>
          function myFunction(x) {
            if (x.matches) { // If media query matches
@@ -107,7 +243,7 @@
            }
          }
          // Create a MediaQueryList object
-         var x = window.matchMedia("(max-width: 500px)")
+         var x = window.matchMedia("(max-width: 550px)")
          // Call listener function at run time
          myFunction(x);
          // Attach listener function on state changes
@@ -116,5 +252,6 @@
          });
 
       </script>
+
    </body>
 </html>
